@@ -1,7 +1,6 @@
 <script>
   import { fade, fly } from "svelte/transition";
   import { onMount } from "svelte";
-  import "../global.css";
   import Header from "$lib/components/Header.svelte"
   import ProjectCard from "$lib/project/Project.svelte";
   import Footer from "$lib/components/Footer.svelte";
