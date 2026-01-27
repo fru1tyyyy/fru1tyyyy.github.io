@@ -24,6 +24,10 @@
   align-items: flex-start;
   width: 100%;
   max-width: 1100px;
+  background: #111; /* <- dark background */
+  padding: 1.5rem;  /* add some padding */
+  border-radius: 12px; /* rounded edges for card */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* optional: subtle shadow */
 }
 
 .image-wrapper {
@@ -60,6 +64,23 @@ p {
   line-height: 1.7;
   color: #b5c4c4;
   font-size: 1rem;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 1.2rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    max-width: 100%;
+  }
 }
 
 /* 📱 Mobile */

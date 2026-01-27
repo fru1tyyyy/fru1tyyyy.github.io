@@ -1,12 +1,13 @@
 <script>
   import { fade, fly } from "svelte/transition";
   import { onMount } from "svelte";
-  import Header from "$lib/components/Header.svelte"
+  import Header from "$lib/components/Header.svelte";
   import ProjectCard from "$lib/project/Project.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
   let showIntro = true;
-  function handleScroll(){
+
+  function handleScroll() {
     showIntro = window.scrollY < 80;
   }
 
@@ -24,6 +25,17 @@
 </svelte:head>
 
 <style>
+:global(body),
+:global(html),
+:global(main),
+:global(#svelte) {
+  background: black !important;
+  color: white !important;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
 .intro-screen {
   position: fixed;
   inset: 0;
@@ -42,12 +54,16 @@
   margin-top: 0;
 }
 
+
 .projects {
   padding: 4rem 6%;
   margin: 0 auto;
   width: 100%;
   max-width: 1400px;
+  background: black; 
+  z-index: 1;
 }
+
 
 h1 {
   text-align: center;
@@ -56,16 +72,18 @@ h1 {
   color: #ffffff;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .projects {
     padding: 3rem 5%;
   }
 }
 </style>
+
 {#if showIntro}
-<div class="intro-screen" transition:fade={{duration: 300}}>
+<div class="intro-screen" transition:fade={{ duration: 300 }}>
   <div class="intro-text">
-    <h1 transition:fly={{y: -300, duration: 400}}>Projects</h1>
+    <h1 transition:fly={{ y: -300, duration: 400 }}>Projects</h1>
   </div>
 </div>
 {/if}
@@ -77,24 +95,24 @@ h1 {
     title="My Portfolio"
     image="/img/portfolio.png"
     link="https://github.com/fru1tyyyy/fru1tyyyy.github.io"
-    description="My personal portfolio built using Svelte, it includes about me, my experience and my projects"/>
+    description="My personal portfolio built using Svelte, it includes about me, my experience and my projects" />
 
   <ProjectCard
     title="CubeX"
     image="/img/cubex.png"
     link="https://github.com/fru1tyyyy/cubex"
-    description="Cube shop built using JavaScript, TypeScript, React, Express"/>
+    description="Cube shop built using JavaScript, TypeScript, React, Express" />
 
   <ProjectCard
     title="Killua"
     image="/img/killua.jpg"
     link="https://github.com/fru1tyyyy/killua"
-    description="Discord Bot that can play music like an actual music bot and can also send memes, built using TypeScript"/>
+    description="Discord Bot that can play music like an actual music bot and can also send memes, built using TypeScript" />
 
   <ProjectCard
     title="Pokemon"
     image="/img/pokemon.jpg"
     link="https://github.com/fru1tyyyy/pokemon"
-    description="a pokemon game that players can choose their own pokemon and put it in the battles, built using Java"/>
+    description="A pokemon game where players can choose their own pokemon and battle, built using Java" />
 </section>
 <Footer/>
