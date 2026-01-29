@@ -75,15 +75,16 @@ li::before {
       <div class="block-title">Introduction</div>
       <ul>
         <li>Hi, Im Yu Been — a Software Engineer student at Sunway University</li>
-        <li>a self taught programmer that has passion on build application and problem solving</li>
+        <li>A self taught programmer that has passion on learning new things and problem solving</li>
+        <li>Aspiring Full-Stack Developer passionate about building Modern Web Applications.</li>
       </ul>
     </div>
     <div class="block">
       <div class="block-title">Technical Skills</div>
       <ul>
-        <li>Frontend development with JavaScript and React.js</li>
+        <li>Frontend development using JavaScript and React.js</li>
         <li>Backend development with TypeScript, Express.js and Python</li>
-        <li>Experience building full-stack applications</li>
+        <li>Experience building Full-Stack Applications</li>
       </ul>
     </div>
     <div class="block">

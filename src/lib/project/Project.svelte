@@ -1,102 +1,146 @@
 <script>
-  export let title;
-  export let description;
-  export let image;
-  export let link;
+  const projects = [
+    {
+      title: "My Portfolio",
+      image: "/img/portfolio.png",
+      link: "https://github.com/fru1tyyyy/fru1tyyyy.github.io",
+      description: "My personal portfolio built using Svelte, it includes about me, my experience and my projects"
+    },
+    {
+      title: "CubeX",
+      image: "/img/cubex.png",
+      link: "https://github.com/fru1tyyyy/cubex",
+      description: "Cube shop built using JavaScript, TypeScript, React, Express"
+    },
+    {
+      title: "Killua",
+      image: "/img/killua.jpg",
+      link: "https://github.com/fru1tyyyy/killua",
+      description: "Discord Bot that can play music like an actual music bot and can also send memes, built using TypeScript"
+    },
+    {
+      title: "Pokemon",
+      image: "/img/pokemon.jpg",
+      link: "https://github.com/fru1tyyyy/pokemon",
+      description: "A pokemon game where players can choose their own pokemon and battle, built using Java"
+    }
+  ];
 </script>
 
-<div class="project-card">
-  <a href={link} target="_blank" class="image-wrapper">
-    <img src={image} alt={title} />
-  </a>
+<section class="projects">
+  <h1>My Projects</h1>
 
-  <div class="content">
-    <h2>{title}</h2>
-    <p>{description}</p>
-  </div>
-</div>
+  {#each projects as project}
+    <div class="project-card">
+      <a href={project.link} target="_blank" class="image-wrapper">
+        <img src={project.image} alt={project.title} />
+      </a>
+
+      <div class="content">
+        <h2>{project.title}</h2>
+        <p>{project.description}</p>
+      </div>
+    </div>
+  {/each}
+</section>
 
 <style>
+.projects {
+  padding: 4rem 2%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  background: black; 
+  box-sizing: border-box;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
 .project-card {
   display: flex;
-  gap: 2rem;
-  margin: 3rem auto;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin: 2rem auto;
   align-items: flex-start;
   width: 100%;
-  max-width: 1100px;
-  background: #111; /* <- dark background */
-  padding: 1.5rem;  /* add some padding */
-  border-radius: 12px; /* rounded edges for card */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* optional: subtle shadow */
+  background: #111; 
+  padding: 1rem;  
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5); 
+  box-sizing: border-box;
 }
 
 .image-wrapper {
+  flex: 1 1 40%; /* allow image to shrink */
+  max-width: 300px; /* optional max width */
   border: 2px solid #e8b5b3;
-  padding: 6px;
+  padding: 4px;
   border-radius: 8px;
   transition: transform 0.2s ease;
 }
 
 .image-wrapper:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 img {
-  width: 340px;
-  max-width: 100%; 
+  width: 100%; /* scale with container */
   height: auto;
   border-radius: 6px;
   display: block;
 }
 
 .content {
-  flex: 1;
+  flex: 1 1 60%; /* content takes remaining space */
 }
 
 h2 {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.5rem;
   color: #cdd9d9;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 p {
-  max-width: 520px;
-  line-height: 1.7;
+  line-height: 1.6;
   color: #b5c4c4;
   font-size: 1rem;
 }
 
-/* 📱 Mobile */
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;
-    align-items: flex-start; 
-    gap: 1.2rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
   }
 
-  img {
+  .image-wrapper {
+    max-width: 90%; /* shrink image wrapper on mobile */
+  }
+
+  .content {
+    text-align: center;
     width: 100%;
   }
 
+  h2 {
+    font-size: 1.3rem;
+  }
+
   p {
-    max-width: 100%;
+    font-size: 0.95rem;
   }
 }
 
-/* 📱 Mobile */
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-    align-items: flex-start; 
-    gap: 1.2rem;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  p {
-    max-width: 100%;
-  }
+/* Global fix for any body overflow */
+:global(body) {
+  overflow-x: hidden;
 }
 </style>

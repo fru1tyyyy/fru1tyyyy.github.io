@@ -39,7 +39,7 @@
     }
 
     h2 {
-        font-size: clamp(3.5rem, 10vw, 7rem);
+        font-size: clamp(3.5rem, 10vw, 6rem);
         font-weight: 700;
         letter-spacing: -0.03em;
         margin-bottom: 2.5rem;

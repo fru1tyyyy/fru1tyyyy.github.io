@@ -17,6 +17,7 @@
     { name: "EXPRESS.JS"},
     { name: "GITHUB"},
     { name: "GIT"},
+    { name: "FIGMA" },
     { name: "JAVA"},
     { name: "PYTHON"},
     { name: "PHP"},
