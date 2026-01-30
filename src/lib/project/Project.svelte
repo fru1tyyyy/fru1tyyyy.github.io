@@ -19,6 +19,12 @@
       description: "Discord Bot that can play music like an actual music bot and can also send memes, built using TypeScript"
     },
     {
+      title: "BlurVision",
+      image: "/img/faceblur.jpg",
+      link: "https://github.com/fru1tyyyy/blurvision",
+      description: "It can blur video, like in this case it can detect people face and blur it"
+    },
+    {
       title: "Pokemon",
       image: "/img/pokemon.jpg",
       link: "https://github.com/fru1tyyyy/pokemon",
@@ -52,7 +58,7 @@
   max-width: 1200px;
   background: black; 
   box-sizing: border-box;
-  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-x: hidden; 
 }
 
 h1 {
@@ -77,8 +83,8 @@ h1 {
 }
 
 .image-wrapper {
-  flex: 1 1 40%; /* allow image to shrink */
-  max-width: 300px; /* optional max width */
+  flex: 1 1 40%; 
+  max-width: 300px; 
   border: 2px solid #e8b5b3;
   padding: 4px;
   border-radius: 8px;
@@ -90,14 +96,14 @@ h1 {
 }
 
 img {
-  width: 100%; /* scale with container */
+  width: 100%; 
   height: auto;
   border-radius: 6px;
   display: block;
 }
 
 .content {
-  flex: 1 1 60%; /* content takes remaining space */
+  flex: 1 1 60%; 
 }
 
 h2 {

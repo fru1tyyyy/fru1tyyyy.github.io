@@ -1,5 +1,5 @@
 <script>
-  const experiences = [
+  const education = [
     {
       date: "April 2025 — Present",
       org: "Sunway University",
@@ -12,19 +12,6 @@
       ]
     },
     {
-      date: "August 2024 - December 2024",
-      org: "BASS SDN BHD",
-      role: "Software Intern",
-      bullets: [
-        "Designing and coding Web based software modules.",
-        "Perform unit testing to meet quality standard.",
-        "Ability to identify and fix bugs within stipulated timeframe.",
-        "Ability to provide technical solutions to customer support within SLA period.",
-        "Write detailed software module documentations, including design spec, technical user guide, reference manual.",
-        "Self-motivated individual with the capability to drive goals in a remote setting."
-      ]
-    },
-    {
       date: "April 2023 — April 2025",
       org: "Sunway College",
       role: "Diploma in Computer Science",
@@ -34,20 +21,19 @@
         "Gain coding skills on Python, Java, PHP and Scala.",
         "Grew in confidence and openness, building meaningful connections with friends."
       ]
-    },
+    }
   ];
 </script>
-
-<section class="experience">
-  <h2>My Experiences</h2>
-  {#each experiences as exp}
+<section class="education">
+  <h2>My Education</h2>
+  {#each education as edu}
     <div class="row">
-      <div class="date">{exp.date}</div>
+      <div class="date">{edu.date}</div>
       <div class="content">
-        <h3>{exp.org}</h3>
-        <h4>{exp.role}</h4>
+        <h3>{edu.org}</h3>
+        <h4>{edu.role}</h4>
         <ul>
-          {#each exp.bullets as bullet}
+          {#each edu.bullets as bullet}
             <li>{bullet}</li>
           {/each}
         </ul>
@@ -57,7 +43,7 @@
 </section>
 
 <style>
-.experience {
+.education {
   background: black;
   color: #d9e7ef;
   padding: 5rem 8%;
@@ -129,11 +115,11 @@ li {
 }
 
 @media (max-width: 768px) {
-  .experience {
+  .education {
     padding: 4rem 6%;
   }
 
-  .experience::before {
+  .education::before {
     left: 20px;
   }
 

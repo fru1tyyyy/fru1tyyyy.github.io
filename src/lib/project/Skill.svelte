@@ -12,14 +12,23 @@
             items: ["React.JS", "Svelte", "Express.JS", "Node.JS", "Laravel"]
         },
         {
-            title: "Tools",
-            items: ["Git", "VS Code", "Visual Studio", "Figma"]
+            title: "Tools & Databases",
+            items: ["Git", "VS Code", "Visual Studio", "Figma", "MongoDB"]
         }
     ];
+
+    let filled = sections.map(section => section.items.map(() => 0));
 
     onMount(() => {
         setTimeout(() => {
             animate = true;
+            sections.forEach((section, i) => {
+                section.items.forEach((_, j) => {
+                    setTimeout(() => {
+                        filled[i][j] = 100; 
+                    }, j * 200); 
+                });
+            });
         }, 100);
     });
 </script>
@@ -91,6 +100,7 @@
 
     .skill-item {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
@@ -104,10 +114,19 @@
 
     .skill-bar {
         flex-shrink: 0;
-        width: 9rem;
+        width: 0%;
         height: 0.35rem;
         border-radius: 999px;
         background: linear-gradient(90deg, #5eead4, #c084fc);
+        transition: width 2s ease-in-out;
+    }
+
+    .skill-bar-container {
+        width: 100%;
+        height: 0.35rem;
+        border-radius: 900px;
+        background: rgba(255,255,255,0.1);
+        overflow: hidden;
     }
 
   @media (max-width: 420px) {
@@ -127,10 +146,12 @@
           {section.title}
         </h3>
         <ul class="skill-list">
-          {#each section.items as item}
+          {#each section.items as item, j}
             <li class="skill-item">
               <span class="skill-name">{item}</span>
-              <span class="skill-bar"></span>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: {filled[sections.indexOf(section)][j]}%"></div>
+              </div>
             </li>
           {/each}
         </ul>

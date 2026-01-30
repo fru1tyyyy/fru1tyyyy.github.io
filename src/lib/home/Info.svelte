@@ -56,7 +56,6 @@ li::before {
   color: #7fb9ff;
 }
 
-/* 📱 Mobile */
 @media (max-width: 768px) {
   section {
     padding: 4rem 5%;
@@ -74,9 +73,9 @@ li::before {
     <div class="block">
       <div class="block-title">Introduction</div>
       <ul>
-        <li>Hi, Im Yu Been — a Software Engineer student at Sunway University</li>
+        <li>Hi, Im Yu Been — A Software Engineer student at Sunway University</li>
         <li>A self taught programmer that has passion on learning new things and problem solving</li>
-        <li>Aspiring Full-Stack Developer passionate about building Modern Web Applications.</li>
+        <li>I am a Full-Stack Developer passionate about building Modern Web Applications.</li>
       </ul>
     </div>
     <div class="block">
@@ -85,6 +84,7 @@ li::before {
         <li>Frontend development using JavaScript and React.js</li>
         <li>Backend development with TypeScript, Express.js and Python</li>
         <li>Experience building Full-Stack Applications</li>
+        <li>Database with MySql and MongoDB</li>
       </ul>
     </div>
     <div class="block">

@@ -1,5 +1,8 @@
 <script>
-  export let techStack = [];
+  /**
+     * @type {any[] | null | undefined}
+     */
+   export let techStack = [];
 </script>
 
 <style>
