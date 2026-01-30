@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
   import Experience from "$lib/work/Experience.svelte";
   import Education from "$lib/work/Educations.svelte";
+  import Volunteer from "$lib/work/Volunteer.svelte";
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
@@ -94,6 +95,20 @@ h1 {
     margin-bottom: 3rem;
     color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .tabs {
+    margin-top: 5rem; 
+    gap: 1rem; 
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  button {
+    width: 80%; 
+    padding: 0.75rem 1rem;
+  }
+}
 </style>
 
 {#if showIntro}
@@ -107,6 +122,7 @@ h1 {
 <div class="tabs">
   <button on:click={() => selectTab("Experience")} class:selected={activeTab === "Experience"}>Experience</button>
   <button on:click={() => selectTab("Education")} class:selected={activeTab === "Education"}>Education</button>
+  <button on:click={() => selectTab("Volunteer")} class:selected={activeTab === "Volunteer"}>Volunteer</button>
 </div>
 
 <div class="tab-content">
@@ -116,6 +132,8 @@ h1 {
     <Experience/>
     {:else if activeTab === "Education"}
     <Education/>
+    {:else if activeTab === "Volunteer"}
+    <Volunteer/>
     {/if}
   </div>
   {/key}

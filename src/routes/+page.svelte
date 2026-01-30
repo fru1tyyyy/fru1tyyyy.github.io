@@ -17,6 +17,7 @@
     { name: "EXPRESS.JS"},
     { name: "GITHUB"},
     { name: "GIT"},
+    { name: "NEXT.JS"},
     { name: "FIGMA" },
     { name: "JAVA"},
     { name: "PYTHON"},

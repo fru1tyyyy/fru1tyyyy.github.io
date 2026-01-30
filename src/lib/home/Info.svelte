@@ -79,20 +79,26 @@ li::before {
       </ul>
     </div>
     <div class="block">
-      <div class="block-title">Technical Skills</div>
-      <ul>
-        <li>Frontend development using JavaScript and React.js</li>
-        <li>Backend development with TypeScript, Express.js and Python</li>
-        <li>Experience building Full-Stack Applications</li>
-        <li>Database with MySql and MongoDB</li>
-      </ul>
-    </div>
-    <div class="block">
       <div class="block-title">Hobbies</div>
       <ul>
         <li>Gaming, Cubing, Coding, Tech Stuff</li>
         <li>Watch Shows, Listen to Music, Workout, Sleep</li>
       </ul>
   </div>
+    <div class="block">
+      <div class="block-title">Technical Skills</div>
+      <ul>
+        <li>Full-Stack Web Development (React.js, Node.js, Express.js)</li>
+        <li>Database Design and Management (MySQL, MongoDB)</li>
+        <li>UI/UX Design and Prototyping (Figma)</li>
+      </ul>
+    </div>
+    <div class="block">
+      <div class="block-title">Soft Skills & Languages</div>
+      <ul>
+        <li>Problem Solving Skill, Time Management, Creativity</li>
+        <li>English (Fluent), Chinese (Fluent), Malay (Conversational)</li>
+      </ul>
+    </div>
 </div>
 </section>

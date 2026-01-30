@@ -1,29 +1,37 @@
 <script>
-  const experiences = [
+  const volunteer = [
     {
-      date: "August 2024 - December 2024",
-      org: "BASS SDN BHD",
-      role: "Software Intern",
+      date: "6 December 2025",
+      org: "Desa Mentari",
       bullets: [
-        "Gain knowledge in upgrading and maintaining computer hardware",
-        "Acquire practical experience in backend development",
-        "Gain practical skills in C# for software development",
-        "Develop professional experience in a real-world work environment"
+        "Participated in community service by painting walls in public or community spaces",
+        "Helped prepare surfaces, apply paint, and ensure a neat, professional finish",
+        "Worked collaboratively with a team to complete the project efficiently",
+        "Gained experience in teamwork, attention to detail, and hands-on project work"
+      ]
+    },
+    {
+      date: "23 May 2024",
+      org: "My Pets Haven",
+      bullets: [
+        "Participate for community service to take care of dogs, including feeding and providing fresh water",
+        "Cleaned and maintained dog cages to ensure a hygienic and safe environment",
+        "Monitored dogs behavior and health, reporting any concerns to staff",
+        "Developed responsibility, teamwork, and animal care skills through hands-on experience"
       ]
     }
   ];
 </script>
 
-<section class="experience">
-  <h2>My Experience</h2>
-  {#each experiences as exp}
+<section class="volunteer">
+  <h2>My Volunteer</h2>
+  {#each volunteer as vol}
     <div class="row">
-      <div class="date">{exp.date}</div>
+      <div class="date">{vol.date}</div>
       <div class="content">
-        <h3>{exp.org}</h3>
-        <h4>{exp.role}</h4>
+        <h3>{vol.org}</h3>
         <ul>
-          {#each exp.bullets as bullet}
+          {#each vol.bullets as bullet}
             <li>{bullet}</li>
           {/each}
         </ul>
@@ -33,7 +41,7 @@
 </section>
 
 <style>
-.experience {
+.volunteer {
   background: black;
   color: #d9e7ef;
   padding: 5rem 8%;
@@ -86,13 +94,6 @@ h2 {
   margin-bottom: 0.3rem;
 }
 
-.content h4 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
 ul {
   padding-left: 1.2rem;
   line-height: 1.7;
@@ -105,11 +106,11 @@ li {
 }
 
 @media (max-width: 768px) {
-  .experience {
+  .volunteer {
     padding: 4rem 6%;
   }
 
-  .experience::before {
+  .volunteer::before {
     left: 20px;
   }
 
