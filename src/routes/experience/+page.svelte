@@ -17,14 +17,13 @@
   }
 
   let showIntro = true;
-  function handleScroll() {
-    showIntro = window.scrollY < 80;
-  }
+  let pageLoaded = false;
 
   onMount(() => {
     document.body.style.overflow = "hidden";
     setTimeout(() => {
         showIntro = false;
+        pageLoaded = true;
         document.body.style.overflow = "auto";
     }, 1000);
   });
@@ -118,13 +117,15 @@ h1 {
   </div>
 </div>
 {/if}
+
 <Header/>
 <div class="tabs">
   <button on:click={() => selectTab("Experience")} class:selected={activeTab === "Experience"}>Experience</button>
   <button on:click={() => selectTab("Education")} class:selected={activeTab === "Education"}>Education</button>
   <button on:click={() => selectTab("Volunteer")} class:selected={activeTab === "Volunteer"}>Volunteer</button>
 </div>
-
+{#if pageLoaded}
+<div in:fly={{y: 300, duration: 800}}>
 <div class="tab-content">
   {#key activeTab}
   <div in:fly={{y: 300, duration: 2000}} out:fly={{y: 300, duration: 500}}>
@@ -139,3 +140,5 @@ h1 {
   {/key}
 </div>
 <Footer/>
+</div>
+{/if}

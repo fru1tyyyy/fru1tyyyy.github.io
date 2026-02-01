@@ -88,9 +88,10 @@ li::before {
     <div class="block">
       <div class="block-title">Technical Skills</div>
       <ul>
-        <li>Full-Stack Web Development (React.js, Node.js, Express.js)</li>
-        <li>Database Design and Management (MySQL, MongoDB)</li>
+        <li>Frontend Development (React.JS, Sveltekit)</li>
+        <li>Backend Development (Express.JS, Next.JS, Laravel)</li>
         <li>UI/UX Design and Prototyping (Figma)</li>
+        <li>Collaboration Tools (Git, GitHub)</li>
       </ul>
     </div>
     <div class="block">

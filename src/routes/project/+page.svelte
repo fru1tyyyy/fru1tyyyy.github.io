@@ -8,10 +8,6 @@
 
   let showIntro = true;
 
-  function handleScroll() {
-    showIntro = window.scrollY < 80;
-  }
-
   onMount(() => {
     document.body.style.overflow = "hidden";
     setTimeout(() => {
