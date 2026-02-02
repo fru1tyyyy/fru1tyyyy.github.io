@@ -60,14 +60,32 @@
 
 .overlay-links a {
   text-decoration: none;
-  color: white;
+  color: transparent; 
   font-weight: bold;
   font-size: 4rem;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(
+    to right,
+    white 20%,
+    purple 40%,
+    red 60%,
+    green 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 5s linear infinite;
   transition: color 0.3s;
 }
 
 .overlay-links a:hover {
-  color: violet;
+  color: violet; 
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -76,11 +94,13 @@
   }
 
   .overlay-links a {
-    font-size: 2.5rem; /* smaller on mobile */
+    font-size: 2.5rem; 
+    background-size: 200% auto; 
   }
 
   .overlay-links li {
     margin: 0.8rem 0;
   }
 }
+
 </style>

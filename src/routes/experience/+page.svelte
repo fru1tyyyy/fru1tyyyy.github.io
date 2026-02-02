@@ -7,7 +7,7 @@
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
-  let activeTab = "Experience";
+  let activeTab = "Education";
 
   /**
      * @param {string} tab
@@ -120,8 +120,8 @@ h1 {
 
 <Header/>
 <div class="tabs">
-  <button on:click={() => selectTab("Experience")} class:selected={activeTab === "Experience"}>Experience</button>
   <button on:click={() => selectTab("Education")} class:selected={activeTab === "Education"}>Education</button>
+  <button on:click={() => selectTab("Experience")} class:selected={activeTab === "Experience"}>Experience</button>
   <button on:click={() => selectTab("Volunteer")} class:selected={activeTab === "Volunteer"}>Volunteer</button>
 </div>
 {#if pageLoaded}
@@ -129,10 +129,10 @@ h1 {
 <div class="tab-content">
   {#key activeTab}
   <div in:fly={{y: 300, duration: 2000}} out:fly={{y: 300, duration: 500}}>
-    {#if activeTab === "Experience"}
-    <Experience/>
-    {:else if activeTab === "Education"}
+    {#if activeTab === "Education"}
     <Education/>
+    {:else if activeTab === "Experience"}
+    <Experience/>
     {:else if activeTab === "Volunteer"}
     <Volunteer/>
     {/if}
