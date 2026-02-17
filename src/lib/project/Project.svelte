@@ -4,31 +4,37 @@
       title: "My Portfolio",
       image: "/img/portfolio.png",
       link: "https://github.com/fru1tyyyy/fru1tyyyy.github.io",
-      description: "My personal portfolio built using Svelte, it includes about me, my experience and my projects"
+      description: "My personal portfolio !!!"
     },
     {
       title: "CubeX",
       image: "/img/cubex.png",
       link: "https://github.com/fru1tyyyy/cubex",
-      description: "Cube shop built using JavaScript, TypeScript, React, Express"
+      description: "A cube shop !!!"
     },
     {
       title: "Killua",
       image: "/img/killua.jpg",
       link: "https://github.com/fru1tyyyy/killua",
-      description: "Discord Bot that can play music like an actual music bot and can also send memes, built using TypeScript"
+      description: "Discord music bot !!!"
     },
     {
       title: "BlurVision",
       image: "/img/faceblur.jpg",
       link: "https://github.com/fru1tyyyy/blurvision",
-      description: "It can blur video, like in this case it can detect people face and blur it"
+      description: "Detect people faces and blur it !!!"
+    },
+    {
+      title: "Predict-Price",
+      image: "/img/ml.jpg",
+      link: "https://github.com/fru1tyyyy/predict-price",
+      description: "Machine Learning to predict price !!!"
     },
     {
       title: "Pokemon",
       image: "/img/pokemon.jpg",
       link: "https://github.com/fru1tyyyy/pokemon",
-      description: "A pokemon game where players can choose their own pokemon and battle, built using Java"
+      description: "A pokemon game !!!"
     }
   ];
 </script>

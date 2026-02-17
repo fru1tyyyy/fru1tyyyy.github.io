@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-  <title>Yu Been | Work</title>
+  <title>Yu Been</title>
 </svelte:head>
 
 <style>

@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-  <title>Yu Been | About Me</title>
+  <title>Yu Been</title>
 </svelte:head>
 
 <style>

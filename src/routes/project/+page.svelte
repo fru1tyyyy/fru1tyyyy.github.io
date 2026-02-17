@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-  <title>Yu Been | Projects</title>
+  <title>Yu Been</title>
 </svelte:head>
 
 <style>
