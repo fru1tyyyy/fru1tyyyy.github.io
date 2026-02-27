@@ -9,11 +9,11 @@
         },
         {
             title: "Frameworks",
-            items: ["React.JS", "Svelte", "Express.JS", "Node.JS", "Laravel", "Next.JS"]
+            items: ["React.JS", "Svelte", "Express.JS", "Node.JS", "Laravel", "Socket.io"]
         },
         {
-            title: "Tools & Databases",
-            items: ["Git", "GitHub", "VS Code", "Visual Studio", "Figma", "MongoDB"]
+            title: "Tools",
+            items: ["Git", "GitHub", "VS Code", "Visual Studio", "Figma", "Postman"]
         }
     ];
 

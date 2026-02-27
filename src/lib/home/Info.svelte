@@ -89,9 +89,9 @@ li::before {
       <div class="block-title">Technical Skills</div>
       <ul>
         <li>Frontend Development (React.JS, Sveltekit)</li>
-        <li>Backend Development (Express.JS, Next.JS, Laravel)</li>
+        <li>Backend Development (Express.JS, Laravel)</li>
         <li>UI/UX Design and Prototyping (Figma)</li>
-        <li>Collaboration Tools (Git, GitHub)</li>
+        <li>Machine Learning (Python)</li>
       </ul>
     </div>
     <div class="block">
