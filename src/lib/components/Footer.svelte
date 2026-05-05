@@ -107,7 +107,7 @@
     }
 
     .cta-text {
-        font-size: clamp(5rem, 22vw, 17rem);
+        font-size: clamp(4rem, 12vw, 10rem);
         font-weight: 900;
         line-height: 0.8;
         margin-left: -8px;
