@@ -1,6 +1,12 @@
 <script>
   const projects = [
     {
+      title: "Chatty",
+      image: "/img/chatty.png",
+      link: "https://github.com/fru1tyyyy/chatty",
+      description: "A real time chatting system !!!"
+    },
+    {
       title: "My Portfolio",
       image: "/img/portfolio.png",
       link: "https://github.com/fru1tyyyy/fru1tyyyy.github.io",
