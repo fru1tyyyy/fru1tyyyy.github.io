@@ -5,15 +5,15 @@
     const sections = [
         {
             title: "Languages",
-            items: ["JavaScript", "TypeScript", "Python", "PHP", "C#", "Java"]
+            items: ["JavaScript", "TypeScript", "Python", "PHP"]
         },
         {
             title: "Frameworks",
-            items: ["React.JS", "Svelte", "Express.JS", "Node.JS", "Laravel", "Socket.io"]
+            items: ["React.JS", "Svelte", "Express.JS", "Node.JS"]
         },
         {
             title: "Tools",
-            items: ["Git", "GitHub", "VS Code", "Visual Studio", "Figma", "Postman"]
+            items: ["Git", "GitHub", "VS Code", "Figma"]
         }
     ];
 
