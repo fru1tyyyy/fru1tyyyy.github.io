@@ -4,7 +4,6 @@
   import Header from "$lib/components/Header.svelte";
   import About from "$lib/home/About.svelte";
   import Info from "$lib/home/Info.svelte";
-  import Footer from "$lib/components/Footer.svelte";
 
   let showIntro = true;
 
@@ -36,7 +35,7 @@
 </script>
 
 <svelte:head>
-  <title>Yu Been</title>
+  <title>YU BEEN</title>
 </svelte:head>
 
 <style>
@@ -84,4 +83,3 @@ h1 {
 <Header/>
 <About {techStack} />
 <Info/>
-<Footer/>

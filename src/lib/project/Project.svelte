@@ -8,7 +8,7 @@
     },
     {
       title: "My Portfolio",
-      image: "/img/portfolio.png",
+      image: "/img/portfolio1.png",
       link: "https://github.com/fru1tyyyy/fru1tyyyy.github.io",
       description: "My personal portfolio !!!"
     },

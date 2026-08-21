@@ -21,7 +21,7 @@
       <li><a href="/" sveltekit:prefetch on:click={toggleMenu}>HOME</a></li>
       <li><a href="/experience" sveltekit:prefetch on:click={toggleMenu}>WORK</a></li>
       <li><a href="/project" sveltekit:prefetch on:click={toggleMenu}>PROJECTS</a></li>
-      <li><a href="mailto:yubeen721@gmail.com" sveltekit:prefetch on:click={toggleMenu}>CONTACT</a></li>
+      <li><a href="/contact" sveltekit:prefetch on:click={toggleMenu}>CONTACT</a></li>
     </ul>
   </div>
 {/if}
@@ -102,5 +102,4 @@
     margin: 0.8rem 0;
   }
 }
-
 </style>

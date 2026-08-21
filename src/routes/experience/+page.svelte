@@ -5,7 +5,6 @@
   import Education from "$lib/work/Educations.svelte";
   import Volunteer from "$lib/work/Volunteer.svelte";
   import Header from "$lib/components/Header.svelte";
-  import Footer from "$lib/components/Footer.svelte";
 
   let activeTab = "Education";
 
@@ -30,7 +29,7 @@
 </script>
 
 <svelte:head>
-  <title>Yu Been</title>
+  <title>YU BEEN</title>
 </svelte:head>
 
 <style>
@@ -139,6 +138,5 @@ h1 {
   </div>
   {/key}
 </div>
-<Footer/>
 </div>
 {/if}
