@@ -3,42 +3,52 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(function () {
+				var saved = null;
+				try { saved = localStorage.getItem("theme"); } catch (e) {}
+				var theme = saved ||
+					(window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
 		
-		<link href="./_app/immutable/assets/Header.C4DeiQmH.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/4.4agObLLY.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.BjXpRQ1s.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/CbiWwTkr.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BjamuOr9.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/8aHU9JS_.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.Bx6Dd4Bz.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/sS7ayVZ5.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ugsjNUjU.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/VOpdHtKZ.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/krDOB0nl.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/OyWh6wFx.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.TmHtbNu2.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/KLSOwndZ.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DftoBT_w.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/4.B6C4dB4P.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/D2ykSKOX.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DX_kBK5O.js">
+		<link href="./_app/immutable/assets/0.CWw46N4n.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Header.BeivZ7zX.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/4.cjon9gwt.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.BsgPVS4F.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Ctlirk_u.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ktWcZJ4g.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BFqzm5RX.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BQ8NCMiS.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DHnNxRl_.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/D_OwhoJY.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/49VcgW2N.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/0bMrCRyF.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/m0DkFzYi.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.yNte9Gl2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/HgefsBKe.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Cfr6L64p.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.BhH2837z.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DnxUgLK1.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CHdb8d2l.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/fByQmB1f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BS6aBjP7.js"><!--12qhfyh--><link rel="icon" href="/_app/immutable/assets/dog.DLYnMhf-.jpg"/><!----><!--p8n5lx--><!----><title>YU BEEN</title>
+		<link rel="modulepreload" href="./_app/immutable/chunks/BclWzKlq.js"><!--12qhfyh--><link rel="icon" href="/_app/immutable/assets/dog.DLYnMhf-.jpg"/><!----><!--p8n5lx--><!----><title>YU BEEN</title>
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents"><!--[--><!--[--><!----><!----><!--[--><div class="intro-screen svelte-p8n5lx"><div class="intro-text svelte-p8n5lx"><h1 class="svelte-p8n5lx">Work</h1></div></div><!--]--> <button class="menu-btn svelte-1elxaub"><!--[!-->☰<!--]--></button> <!--[!--><!--]--><!----> <div class="tabs svelte-p8n5lx"><button class="svelte-p8n5lx selected">Education</button> <button class="svelte-p8n5lx">Experience</button> <button class="svelte-p8n5lx">Volunteer</button></div> <!--[!--><!--]--><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+		<div style="display: contents"><!--[--><!--[--><!----><!----><!--[--><div class="intro-screen svelte-p8n5lx"><div class="intro-text svelte-p8n5lx"><h1 class="svelte-p8n5lx">Work</h1></div></div><!--]--> <div class="theme-toggle-wrap svelte-1elxaub"><button class="theme-toggle svelte-12i6kpp" aria-label="Toggle dark and light mode">☀️</button><!----></div> <button class="menu-btn svelte-1elxaub" aria-label="Toggle menu"><!--[!-->☰<!--]--></button> <!--[!--><!--]--><!----> <div class="work-wrap svelte-p8n5lx"><div class="tabs svelte-p8n5lx"><button class="svelte-p8n5lx selected">Education</button> <button class="svelte-p8n5lx">Experience</button> <button class="svelte-p8n5lx">Volunteer</button></div> <!--[!--><!--]--></div><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_2c23fd = {
+					__sveltekit_w8a7do = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.BjXpRQ1s.js"),
-						import("./_app/immutable/entry/app.Bx6Dd4Bz.js")
+						import("./_app/immutable/entry/start.BsgPVS4F.js"),
+						import("./_app/immutable/entry/app.BQ8NCMiS.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
