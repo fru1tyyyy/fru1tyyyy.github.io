@@ -4,7 +4,6 @@
   import Header from "$lib/components/Header.svelte";
   import About from "$lib/home/About.svelte";
   import Info from "$lib/home/Info.svelte";
-
   let showIntro = true;
 
   const techStack = [
@@ -26,10 +25,8 @@
   ];
 
   onMount(() => {
-    document.body.style.overflow = "hidden";
     setTimeout(() => {
       showIntro = false;
-      document.body.style.overflow = "auto";
     }, 1000);
   });
 </script>
@@ -39,18 +36,11 @@
 </svelte:head>
 
 <style>
-  :global(html, body) {
-  margin: 0;
-  padding: 0;
-  background: #061822;
-  overflow-x: hidden;
-}
-
 .intro-screen {
   position: fixed;
   inset: 0;
-  background: black;
-  color: white;
+  background: var(--bg);
+  color: var(--text);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,7 +58,7 @@ h1 {
   text-align: center;
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 3rem;
-  color: #ffffff;
+  color: var(--text);
 }
 </style>
 

@@ -58,10 +58,11 @@
 
 <style>
 .education {
-  background: black;
-  color: #d9e7ef;
+  background: var(--section-bg);
+  color: var(--text-soft);
   padding: 5rem 8%;
   position: relative;
+  transition: background 0.3s, color 0.3s;
 }
 
 h2 {
@@ -69,7 +70,7 @@ h2 {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 700;
   margin-bottom: 4rem;
-  color: #eaf6ff;
+  color: var(--text);
 }
 
 .row {
@@ -82,7 +83,7 @@ h2 {
 
 .row:hover {
   transform: translateX(5px);
-  background: #111;
+  background: var(--card-bg);
   border-radius: 12px;
   padding: 0.1rem;
 }
@@ -90,7 +91,7 @@ h2 {
 .date {
   width: 200px;
   font-size: 0.95rem;
-  color: #8fb3c9;
+  color: var(--muted);
   text-align: right;
   padding-top: 2px;
   line-height: 3.7;
@@ -106,14 +107,14 @@ h2 {
 
 .content h3 {
   font-size: 1.2rem;
-  color: #9dd7ff;
+  color: var(--tech-text);
   margin-bottom: 0.3rem;
 }
 
 .content h4 {
   font-size: 1.05rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text);
   margin-bottom: 1rem;
 }
 
@@ -124,7 +125,7 @@ ul {
 
 li {
   font-size: 0.95rem;
-  color: #c9dce9;
+  color: var(--text-soft);
   margin-bottom: 0.6rem;
 }
 

@@ -8,10 +8,8 @@
   let showIntro = true;
 
   onMount(() => {
-    document.body.style.overflow = "hidden";
     setTimeout(() => {
       showIntro = false;
-      document.body.style.overflow = "auto";
     }, 1000);
   });
 </script>
@@ -21,17 +19,11 @@
 </svelte:head>
 
 <style>
-:global(body) {
-    background: black;
-    margin: 0;
-    color: white; 
-  }
-
 .intro-screen {
   position: fixed;
   inset: 0;
-  background: black;
-  color: white;
+  background: var(--bg);
+  color: var(--text);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +41,7 @@ h1 {
   text-align: center;
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 3rem;
-  color: #ffffff;
+  color: var(--text);
 }
 </style>
 

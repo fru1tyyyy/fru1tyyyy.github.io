@@ -9,13 +9,14 @@
   .hero {
     width: 100%;
     min-height: 100vh;
-    background: black;
+    background: var(--section-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Georgia, "Times New Roman", serif;
-    color: #e6f1f5;
+    color: var(--text);
     position: relative;
+    transition: background 0.3s, color 0.3s;
   }
 
   .hero-content {
@@ -28,7 +29,7 @@
     width: 200px;
     height: 200px;
     background: #bfc4ff;
-    border: 3px solid #7fb9ff;
+    border: 3px solid var(--link-blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +49,7 @@
   .intro p {
     margin-top: 0.6rem;
     font-size: 1.1rem;
-    color: #9fb4bf;
+    color: var(--muted);
     letter-spacing: 0.06em;
     font-family: "Segoe UI", sans-serif;
   }
@@ -58,10 +59,11 @@
     bottom: 0;
     width: 100%;
     padding: 1rem 0;
-    border-top: 1px solid #173040;
-    border-bottom: 1px solid #173040;
-    background: #061822;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
     overflow: hidden;
+    transition: background 0.3s;
   }
 
   .tech-bar {
@@ -77,16 +79,16 @@
     gap: 0.6rem;
     font-size: 0.9rem;
     letter-spacing: 0.15em;
-    color: #b7d9ff;
+    color: var(--tech-text);
     font-family: "Segoe UI", sans-serif;
   }
 
   .separator {
-    color: #335a72;
+    color: var(--separator);
   }
 
   @media (max-width: 768px) {
-    .hero-content{
+    .hero-content {
       flex-direction: column;
       text-align: center;
       gap: 1.5rem;

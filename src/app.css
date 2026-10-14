@@ -1,0 +1,68 @@
+:root,
+:root[data-theme="dark"] {
+  --bg: #061822;
+  --section-bg: #000000;
+  --text: #ffffff;
+  --text-soft: #cfe4f1;
+  --muted: #9fb4bf;
+  --border: #173040;
+  --tech-text: #b7d9ff;
+  --separator: #335a72;
+  --link-blue: #7fb9ff;
+  --surface: rgba(255, 255, 255, 0.1);
+  --accent: #5eead4;
+  --accent-text: #000000;
+  --link-start: #ffffff;
+
+  --card-bg: #111111;
+  --card-shadow: rgba(0, 0, 0, 0.5);
+  --title-soft: #cdd9d9;
+  --p-soft: #b5c4c4;
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: rgba(0, 0, 0, 0.6);
+  --skill-title: #e5e7eb;
+  --skill-name: #d1d5db;
+  --track: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f9fb;
+  --section-bg: #ffffff;
+  --text: #0b1f2a;
+  --text-soft: #1f3a4a;
+  --muted: #4a6270;
+  --border: #c9d8e0;
+  --tech-text: #1d5a9e;
+  --separator: #8fb0c4;
+  --link-blue: #2b6cb0;
+  --surface: rgba(0, 0, 0, 0.07);
+  --accent: #5eead4;
+  --accent-text: #000000;
+  --link-start: #0b1f2a;
+
+  --card-bg: #eef4f7;
+  --card-shadow: rgba(0, 0, 0, 0.12);
+  --title-soft: #1f3a4a;
+  --p-soft: #3d5663;
+  --glass: rgba(0, 0, 0, 0.04);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.12);
+  --skill-title: #0b1f2a;
+  --skill-name: #2a4352;
+  --track: rgba(0, 0, 0, 0.1);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}

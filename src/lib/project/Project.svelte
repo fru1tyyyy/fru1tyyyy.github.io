@@ -45,39 +45,45 @@
   ];
 </script>
 
-<section class="projects">
-  <h1>My Projects</h1>
+<div class="projects-wrap">
+  <section class="projects">
+    <h1>My Projects</h1>
 
-  {#each projects as project}
-    <div class="project-card">
-      <a href={project.link} target="_blank" class="image-wrapper">
-        <img src={project.image} alt={project.title} />
-      </a>
+    {#each projects as project}
+      <div class="project-card">
+        <a href={project.link} target="_blank" class="image-wrapper">
+          <img src={project.image} alt={project.title} />
+        </a>
 
-      <div class="content">
-        <h2>{project.title}</h2>
-        <p>{project.description}</p>
+        <div class="content">
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+        </div>
       </div>
-    </div>
-  {/each}
-</section>
+    {/each}
+  </section>
+</div>
 
 <style>
+.projects-wrap {
+  background: var(--section-bg);
+  transition: background 0.3s;
+}
+
 .projects {
   padding: 4rem 2%;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  background: black; 
   box-sizing: border-box;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 h1 {
   text-align: center;
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 3rem;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .project-card {
@@ -87,16 +93,17 @@ h1 {
   margin: 2rem auto;
   align-items: flex-start;
   width: 100%;
-  background: #111; 
-  padding: 1rem;  
-  border-radius: 12px; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5); 
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--card-shadow);
   box-sizing: border-box;
+  transition: background 0.3s;
 }
 
 .image-wrapper {
-  flex: 1 1 40%; 
-  max-width: 300px; 
+  flex: 1 1 40%;
+  max-width: 300px;
   border: 2px solid #e8b5b3;
   padding: 4px;
   border-radius: 8px;
@@ -108,29 +115,28 @@ h1 {
 }
 
 img {
-  width: 100%; 
+  width: 100%;
   height: auto;
   border-radius: 6px;
   display: block;
 }
 
 .content {
-  flex: 1 1 60%; 
+  flex: 1 1 60%;
 }
 
 h2 {
   margin: 0 0 0.5rem;
-  color: #cdd9d9;
+  color: var(--title-soft);
   font-size: 1.5rem;
 }
 
 p {
   line-height: 1.6;
-  color: #b5c4c4;
+  color: var(--p-soft);
   font-size: 1rem;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;
@@ -140,7 +146,7 @@ p {
   }
 
   .image-wrapper {
-    max-width: 90%; /* shrink image wrapper on mobile */
+    max-width: 90%;
   }
 
   .content {
@@ -155,10 +161,5 @@ p {
   p {
     font-size: 0.95rem;
   }
-}
-
-/* Global fix for any body overflow */
-:global(body) {
-  overflow-x: hidden;
 }
 </style>

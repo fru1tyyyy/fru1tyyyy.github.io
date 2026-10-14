@@ -5,10 +5,8 @@
     let showIntro = true;
 
     onMount(() => {
-        document.body.style.overflow = "hidden";
         setTimeout(() => {
             showIntro = false;
-            document.body.style.overflow = "auto";
         }, 1000);
     })
 </script>
@@ -21,8 +19,8 @@
     .intro-screen {
         position: fixed;
         inset: 0;
-        background: black;
-        color: white;
+        background: var(--bg);
+        color: var(--text);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -42,7 +40,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background: #111;
+        background: var(--bg);
         display: flex;
         flex-direction: column;
         z-index: 50;
@@ -54,7 +52,7 @@
         flex-direction: column;
         padding: 60px 80px;
         font-family: 'Inter', -apple-system, sans-serif;
-        color: #fff;
+        color: var(--text);
         box-sizing: border-box;
     }
 
@@ -133,21 +131,21 @@
         border: 1px solid #444;
         border-radius: 100px;
         text-decoration: none;
-        color: #fff;
+        color: var(--text);
         font-size: 13px;
         font-weight: 600;
         transition: all 0.3s;
     }
 
     .social-btn:hover {
-        background: #fff;
-        color: #000;
+        background: var(--bg);
+        color: var(--text);
     }
 
     .credits {
         text-align: right;
         font-size: 14px;
-        color: #666;
+        color: var(--text);
     }
 
     .cta-text-link {

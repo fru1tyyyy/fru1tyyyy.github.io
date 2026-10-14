@@ -1,31 +1,46 @@
 <script>
   import { fly, fade } from "svelte/transition";
+  import ThemeToggle from "$lib/components/Theme.svelte";
 
   let isOpen = false;
 
   function toggleMenu() {
     isOpen = !isOpen;
-    document.body.style.overflow = isOpen ? 'hidden' : 'auto'; 
+    document.body.style.overflow = isOpen ? 'hidden' : ''; 
   }
 </script>
-<button class="menu-btn" on:click={toggleMenu}>
+
+<div class="theme-toggle-wrap">
+  <ThemeToggle />
+</div>
+
+<button class="menu-btn" on:click={toggleMenu} aria-label="Toggle menu">
   {#if isOpen}
     ✕
   {:else}
     ☰
   {/if}
 </button>
+
 {#if isOpen}
   <div class="overlay" on:click={toggleMenu} transition:fade={{ duration: 200 }}>
     <ul class="overlay-links" on:click|stopPropagation transition:fly={{ y: -300, duration: 400 }}>
-      <li><a href="/" sveltekit:prefetch on:click={toggleMenu}>HOME</a></li>
-      <li><a href="/experience" sveltekit:prefetch on:click={toggleMenu}>WORK</a></li>
-      <li><a href="/project" sveltekit:prefetch on:click={toggleMenu}>PROJECTS</a></li>
-      <li><a href="/contact" sveltekit:prefetch on:click={toggleMenu}>CONTACT</a></li>
+      <li><a href="/" data-sveltekit-preload-data="hover" on:click={toggleMenu}>HOME</a></li>
+      <li><a href="/experience" data-sveltekit-preload-data="hover" on:click={toggleMenu}>WORK</a></li>
+      <li><a href="/project" data-sveltekit-preload-data="hover" on:click={toggleMenu}>PROJECTS</a></li>
+      <li><a href="/contact" data-sveltekit-preload-data="hover" on:click={toggleMenu}>CONTACT</a></li>
     </ul>
   </div>
 {/if}
+
 <style>
+.theme-toggle-wrap {
+  position: fixed;
+  top: 1rem;
+  right: 4.5rem;
+  z-index: 1001;
+}
+
 .menu-btn {
   position: fixed;
   top: 1rem;
@@ -33,7 +48,7 @@
   background: none;
   border: none;
   font-size: 2rem;
-  color: white;
+  color: var(--text);
   z-index: 1001;
   cursor: pointer;
 }
@@ -41,7 +56,7 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: black; 
+  background-color: var(--bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +81,7 @@
   font-family: 'Inter', sans-serif;
   background: linear-gradient(
     to right,
-    white 20%,
+    var(--link-start) 20%,
     purple 40%,
     red 60%,
     green 80%
@@ -91,6 +106,10 @@
 @media (max-width: 768px) {
   .menu-btn {
     font-size: 1.8rem;
+  }
+
+  .theme-toggle-wrap {
+    right: 4rem;
   }
 
   .overlay-links a {

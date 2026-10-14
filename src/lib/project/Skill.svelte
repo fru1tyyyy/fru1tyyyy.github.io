@@ -37,11 +37,13 @@
         text-align: center;
         font-size: clamp(2rem, 5vw, 3rem);
         margin-bottom: 3rem;
-        color: #ffffff;
+        color: var(--text);
     }
+
     .skill-section {
-        background: black;
+        background: var(--section-bg);
         padding: 5rem 1.25rem;
+        transition: background 0.3s;
     }
 
     .skill-header {
@@ -72,13 +74,13 @@
    }
 
     .skill-card {
-        background: rgba(255, 255, 255, 0.06);
+        background: var(--glass);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         border-radius: 1.25rem;
         padding: 1.75rem;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 20px 40px var(--glass-shadow);
     }
 
     .skill-title {
@@ -88,7 +90,7 @@
         font-size: 0.9rem;
         font-weight: 600;
         letter-spacing: 0.12em;
-        color: #e5e7eb;
+        color: var(--skill-title);
     }
 
     .skill-list {
@@ -107,7 +109,7 @@
     }
 
     .skill-name {
-        color: #d1d5db;
+        color: var(--skill-name);
         font-size: 0.9rem;
         white-space: nowrap;
     }
@@ -125,7 +127,7 @@
         width: 100%;
         height: 0.35rem;
         border-radius: 900px;
-        background: rgba(255,255,255,0.1);
+        background: var(--track);
         overflow: hidden;
     }
 
