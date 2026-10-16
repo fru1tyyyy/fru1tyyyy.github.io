@@ -10,45 +10,48 @@
 				var theme = saved ||
 					(window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
 				document.documentElement.setAttribute("data-theme", theme);
+
+				var lang = null;
+				try { lang = localStorage.getItem("lang"); } catch (e) {}
+				if (lang === "zh") document.documentElement.lang = "zh";
 			})();
 		</script>
 		
 		<link href="./_app/immutable/assets/0.CWw46N4n.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Header.BeivZ7zX.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/4.cjon9gwt.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.BsgPVS4F.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Ctlirk_u.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ktWcZJ4g.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BFqzm5RX.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.BQ8NCMiS.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DHnNxRl_.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/D_OwhoJY.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/49VcgW2N.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/0bMrCRyF.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/m0DkFzYi.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.yNte9Gl2.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/HgefsBKe.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Cfr6L64p.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/4.BhH2837z.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DnxUgLK1.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/CHdb8d2l.js">
+		<link href="./_app/immutable/assets/Header.DmcGebuT.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/4.B0GKBQiB.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.Brgm9IPr.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/B1xGVb-P.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BfCF-Lxr.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.DfTAXFcu.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Dy4slsvU.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DC05L134.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CV9YZAjk.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CeTb1Dg6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BWGdQXTI.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.Dqs7TBbY.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/PrYANOFN.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BX-5mzhk.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.De1tdkdb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CaOnsXnr.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/B2LXzNx9.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/fByQmB1f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BclWzKlq.js"><!--12qhfyh--><link rel="icon" href="/_app/immutable/assets/dog.DLYnMhf-.jpg"/><!----><!--p8n5lx--><!----><title>YU BEEN</title>
+		<link rel="modulepreload" href="./_app/immutable/chunks/CjSfdU5v.js"><!--12qhfyh--><link rel="icon" href="/_app/immutable/assets/dog.DLYnMhf-.jpg"/><!----><!--p8n5lx--><!----><title>YU BEEN</title>
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents"><!--[--><!--[--><!----><!----><!--[--><div class="intro-screen svelte-p8n5lx"><div class="intro-text svelte-p8n5lx"><h1 class="svelte-p8n5lx">Work</h1></div></div><!--]--> <div class="theme-toggle-wrap svelte-1elxaub"><button class="theme-toggle svelte-12i6kpp" aria-label="Toggle dark and light mode">☀️</button><!----></div> <button class="menu-btn svelte-1elxaub" aria-label="Toggle menu"><!--[!-->☰<!--]--></button> <!--[!--><!--]--><!----> <div class="work-wrap svelte-p8n5lx"><div class="tabs svelte-p8n5lx"><button class="svelte-p8n5lx selected">Education</button> <button class="svelte-p8n5lx">Experience</button> <button class="svelte-p8n5lx">Volunteer</button></div> <!--[!--><!--]--></div><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+		<div style="display: contents"><!--[--><!--[--><!----><!----><!--[--><div class="intro-screen svelte-p8n5lx"><div class="intro-text svelte-p8n5lx"><h1 class="svelte-p8n5lx">Work</h1></div></div><!--]--> <div class="toggle-wrap svelte-1elxaub"><button class="lang-toggle svelte-d39fdc" aria-label="Change Language">中</button><!----> <button class="theme-toggle svelte-12i6kpp" aria-label="Toggle dark and light mode">☀️</button><!----></div> <div class="theme-toggle-wrap svelte-1elxaub"><button class="theme-toggle svelte-12i6kpp" aria-label="Toggle dark and light mode">☀️</button><!----></div> <button class="menu-btn svelte-1elxaub" aria-label="Toggle menu"><!--[!-->☰<!--]--></button> <!--[!--><!--]--><!----> <div class="work-wrap svelte-p8n5lx"><div class="tabs svelte-p8n5lx"><button class="svelte-p8n5lx selected">Education</button> <button class="svelte-p8n5lx">Experience</button> <button class="svelte-p8n5lx">Volunteer</button></div> <!--[!--><!--]--></div><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_w8a7do = {
+					__sveltekit_1ndfaup = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.BsgPVS4F.js"),
-						import("./_app/immutable/entry/app.BQ8NCMiS.js")
+						import("./_app/immutable/entry/start.Brgm9IPr.js"),
+						import("./_app/immutable/entry/app.DfTAXFcu.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
