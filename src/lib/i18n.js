@@ -234,8 +234,8 @@ export const translations = {
       items: [
         {
           date: "2025 - 2027",
-          org: "双威大学",
-          role: "软件工程荣誉学士学位",
+          org: "Sunway University",
+          role: "Bachelor of Software Engineering (Hons)",
           bullets: [
             "打下扎实的软件开发、算法和系统设计基础",
             "培养全栈开发和软件工程原理的实践能力",
@@ -246,8 +246,8 @@ export const translations = {
         },
         {
           date: "2023 - 2025",
-          org: "双威学院",
-          role: "计算机科学文凭",
+          org: "Sunway College",
+          role: "Diploma in Computer Science",
           bullets: [
             "以优异成绩毕业，获得学术卓越奖",
             "培养逻辑思维、算法设计和调试能力",
