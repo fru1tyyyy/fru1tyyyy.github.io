@@ -4,6 +4,7 @@
   import Header from "$lib/components/Header.svelte";
   import Skill from "$lib/project/Skill.svelte";
   import Project from "$lib/project/Project.svelte";
+  import { t } from "$lib/i18n.js";
 
   let showIntro = true;
 
@@ -17,6 +18,18 @@
 <svelte:head>
   <title>YU BEEN</title>
 </svelte:head>
+
+{#if showIntro}
+<div class="intro-screen" transition:fade={{ duration: 300 }}>
+  <div class="intro-text">
+    <h1 transition:fly={{ y: -300, duration: 400 }}>{$t("nav.projects")}</h1>
+  </div>
+</div>
+{/if}
+
+<Header/>
+<Skill/>
+<Project/>
 
 <style>
 .intro-screen {
@@ -44,14 +57,3 @@ h1 {
   color: var(--text);
 }
 </style>
-
-{#if showIntro}
-<div class="intro-screen" transition:fade={{ duration: 300 }}>
-  <div class="intro-text">
-    <h1 transition:fly={{ y: -300, duration: 400 }}>Projects</h1>
-  </div>
-</div>
-{/if}
-<Header/>
-<Skill/>
-<Project/>

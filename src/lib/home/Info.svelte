@@ -1,3 +1,24 @@
+<script>
+  import { t } from "$lib/i18n.js";
+</script>
+
+<section id="about">
+  <div class="content">
+    <h2>{$t("info.title")}</h2>
+
+    {#each $t("info.blocks") as block}
+      <div class="block">
+        <div class="block-title">{block.title}</div>
+        <ul>
+          {#each block.items as item}
+            <li>{item}</li>
+          {/each}
+        </ul>
+      </div>
+    {/each}
+  </div>
+</section>
+
 <style>
   section {
     min-height: 100vh;
@@ -67,40 +88,3 @@
     }
   }
 </style>
-
-<section id="about">
-  <div class="content">
-    <h2>About Me</h2>
-    <div class="block">
-      <div class="block-title">Introduction</div>
-      <ul>
-        <li>Hi, Im Yu Been — A Software Engineer student at Sunway University</li>
-        <li>A self taught programmer that has passion on learning new things and problem solving</li>
-        <li>I am a Full-Stack Developer passionate about building Modern Web Applications.</li>
-      </ul>
-    </div>
-    <div class="block">
-      <div class="block-title">Hobbies</div>
-      <ul>
-        <li>Gaming, Cubing, Coding, Tech Stuff</li>
-        <li>Watch Shows, Listen to Music, Workout, Sleep</li>
-      </ul>
-  </div>
-    <div class="block">
-      <div class="block-title">Technical Skills</div>
-      <ul>
-        <li>Frontend Development (React.JS, Sveltekit)</li>
-        <li>Backend Development (Express.JS, Laravel)</li>
-        <li>UI/UX Design and Prototyping (Figma)</li>
-        <li>Machine Learning (Python)</li>
-      </ul>
-    </div>
-    <div class="block">
-      <div class="block-title">Soft Skills & Languages</div>
-      <ul>
-        <li>Problem Solving Skill, Time Management, Creativity</li>
-        <li>English (Fluent), Chinese (Fluent), Malay (Conversational)</li>
-      </ul>
-    </div>
-</div>
-</section>

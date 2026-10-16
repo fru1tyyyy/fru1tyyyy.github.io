@@ -1,46 +1,10 @@
 <script>
-  const education = [
-    {
-      date: "2025 - 2027",
-      org: "Sunway University",
-      role: "Bachelor of Software Engineering (Hons)",
-      bullets: [
-        "Pursuing a strong foundation in software development, algorithms, and system design",
-        "Developing practical skills in full-stack development and software engineering principles",
-        "Building real-world applications using JavaScript, TypeScript, React and Express",
-        "Strengthening problem-solving and analytical thinking through coursework and projects",
-        "CGPA: 3.42"
-      ]
-    },
-    {
-      date: "2023 - 2025",
-      org: "Sunway College",
-      role: "Diploma in Computer Science",
-      bullets: [
-        "Graduated with Academic Excellence Award",
-        "Developed skills in logical thinking, algorithm design, and debugging",
-        "Gain coding skills on Python, Java, PHP and Scala",
-        "Grew in confidence and openness, building meaningful connections with friends",
-        "CGPA: 3.85"
-      ]
-    },
-    {
-      date: "2018 - 2022",
-      org: "DWI EMAS International School",
-      role: "IGCSE",
-      bullets: [
-        "Completed at high school education, gaining strong foundations in core subjects such as Math, Physics and IT",
-        "Demonstrated consistent academic effort and responsibility through assignments and assessments",
-        "Learned to research, plan, and execute assignments without external help",
-        "Maintain personal organization, keeping belongings and study materials in order",
-        "6A, 2B"
-      ]
-    }
-  ];
+  import { t } from "$lib/i18n.js";
 </script>
+
 <section class="education">
-  <h2>My Education</h2>
-  {#each education as edu}
+  <h2>{$t("education.title")}</h2>
+  {#each $t("education.items") as edu}
     <div class="row">
       <div class="date">{edu.date}</div>
       <div class="content">
@@ -134,19 +98,10 @@ li {
     padding: 4rem 6%;
   }
 
-  .education::before {
-    left: 20px;
-  }
-
   .row {
     flex-direction: column;
     gap: 0.5rem;
     padding-left: 40px;
-  }
-
-  .row::before {
-    left: 10px;
-    top: 0.5rem;
   }
 
   .date {

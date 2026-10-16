@@ -1,22 +1,10 @@
 <script>
-  const experiences = [
-    {
-      date: "Aug 2024 - Dec 2024",
-      org: "BASS SDN BHD",
-      role: "Software Intern",
-      bullets: [
-        "Gain knowledge in upgrading and maintaining computer hardware",
-        "Acquire practical experience in backend development",
-        "Gain practical skills in C# for software development",
-        "Develop professional experience in a real-world work environment"
-      ]
-    }
-  ];
+  import { t } from "$lib/i18n.js";
 </script>
 
 <section class="experience">
-  <h2>My Experience</h2>
-  {#each experiences as exp}
+  <h2>{$t("experience.title")}</h2>
+  {#each $t("experience.items") as exp}
     <div class="row">
       <div class="date">{exp.date}</div>
       <div class="content">
@@ -110,19 +98,10 @@ li {
     padding: 4rem 6%;
   }
 
-  .experience::before {
-    left: 20px;
-  }
-
   .row {
     flex-direction: column;
     gap: 0.5rem;
     padding-left: 40px;
-  }
-
-  .row::before {
-    left: 10px;
-    top: 0.5rem;
   }
 
   .date {

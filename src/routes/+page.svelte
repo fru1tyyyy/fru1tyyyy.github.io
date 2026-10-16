@@ -4,6 +4,7 @@
   import Header from "$lib/components/Header.svelte";
   import About from "$lib/home/About.svelte";
   import Info from "$lib/home/Info.svelte";
+  import { t } from "$lib/i18n.js";
   let showIntro = true;
 
   const techStack = [
@@ -35,6 +36,18 @@
   <title>YU BEEN</title>
 </svelte:head>
 
+{#if showIntro}
+<div class="intro-screen" transition:fade={{duration: 300}}>
+  <div class="intro-text">
+    <h1 transition:fly={{y: -300, duration: 400}}>{$t("nav.home")}</h1>
+  </div>
+</div>
+{/if}
+
+<Header/>
+<About {techStack}/>
+<Info/>
+
 <style>
 .intro-screen {
   position: fixed;
@@ -61,15 +74,3 @@ h1 {
   color: var(--text);
 }
 </style>
-
-{#if showIntro}
-<div class="intro-screen" transition:fade={{duration: 300}}>
-  <div class="intro-text">
-    <h1 transition:fly={{y: -300, duration: 400}}>Home</h1>
-  </div>
-</div>
-{/if}
-
-<Header/>
-<About {techStack} />
-<Info/>

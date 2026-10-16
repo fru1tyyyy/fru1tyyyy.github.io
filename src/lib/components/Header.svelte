@@ -1,6 +1,8 @@
 <script>
   import { fly, fade } from "svelte/transition";
   import ThemeToggle from "$lib/components/Theme.svelte";
+  import LangToggle from "$lib/components/Toggle.svelte";
+  import { t } from "$lib/i18n.js";
 
   let isOpen = false;
 
@@ -9,6 +11,11 @@
     document.body.style.overflow = isOpen ? 'hidden' : ''; 
   }
 </script>
+
+<div class="toggle-wrap">
+  <LangToggle/>
+  <ThemeToggle/>
+</div>
 
 <div class="theme-toggle-wrap">
   <ThemeToggle />
@@ -25,10 +32,10 @@
 {#if isOpen}
   <div class="overlay" on:click={toggleMenu} transition:fade={{ duration: 200 }}>
     <ul class="overlay-links" on:click|stopPropagation transition:fly={{ y: -300, duration: 400 }}>
-      <li><a href="/" data-sveltekit-preload-data="hover" on:click={toggleMenu}>HOME</a></li>
-      <li><a href="/experience" data-sveltekit-preload-data="hover" on:click={toggleMenu}>WORK</a></li>
-      <li><a href="/project" data-sveltekit-preload-data="hover" on:click={toggleMenu}>PROJECTS</a></li>
-      <li><a href="/contact" data-sveltekit-preload-data="hover" on:click={toggleMenu}>CONTACT</a></li>
+      <li><a href="/" data-sveltekit-preload-data="hover" on:click={toggleMenu}>{$t("nav.home")}</a></li>
+      <li><a href="/experience" data-sveltekit-preload-data="hover" on:click={toggleMenu}>{$t("nav.work")}</a></li>
+      <li><a href="/project" data-sveltekit-preload-data="hover" on:click={toggleMenu}>{$t("nav.projects")}</a></li>
+      <li><a href="/contact" data-sveltekit-preload-data="hover" on:click={toggleMenu}>{$t("nav.contact")}</a></li>
     </ul>
   </div>
 {/if}
@@ -95,6 +102,15 @@
 
 .overlay-links a:hover {
   color: violet; 
+}
+
+.toggle-wrap {
+  position: fixed;
+  top: 1rem;
+  right: 4.5rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1001;
 }
 
 @keyframes shine {

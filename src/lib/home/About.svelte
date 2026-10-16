@@ -1,9 +1,42 @@
 <script>
+  import { t } from "$lib/i18n.js";
+
   /**
-     * @type {any[] | null | undefined}
-     */
-   export let techStack = [];
+   * @type {any[] | null | undefined}
+   */
+  export let techStack = [];
 </script>
+
+<section class="hero" id="about">
+  <div class="hero-content">
+    <div class="avatar">
+      <img src="/img/pfp3.jpg" alt="Avatar" />
+    </div>
+
+    <div class="intro">
+      <h1>{$t("home.name")}</h1>
+      <p>{$t("home.role")}</p>
+    </div>
+  </div>
+
+  <div class="tech-bar-container">
+    <div class="tech-bar">
+      {#each techStack ?? [] as tech}
+        <div class="tech-item">
+          <span>{tech.name}</span>
+          <span class="separator">/</span>
+        </div>
+      {/each}
+
+      {#each techStack ?? [] as tech}
+        <div class="tech-item">
+          <span>{tech.name}</span>
+          <span class="separator">/</span>
+        </div>
+      {/each}
+    </div>
+  </div>
+</section>
 
 <style>
   .hero {
@@ -100,36 +133,3 @@
     to { transform: translateX(-50%); }
   }
 </style>
-
-<section class="hero" id="about">
-  <div class="hero-content">
-    <div class="avatar">
-      <img src="/img/pfp3.jpg" alt="Avatar" />
-    </div>
-
-    <div class="intro">
-      <h1>Yu Been</h1>
-      <p>Software Engineer</p>
-    </div>
-  </div>
-
-  <div class="tech-bar-container">
-    <div class="tech-bar">
-      {#each techStack as tech}
-        <div class="tech-item">
-          <span>{tech.icon}</span>
-          <span>{tech.name}</span>
-          <span class="separator">/</span>
-        </div>
-      {/each}
-
-      {#each techStack as tech}
-        <div class="tech-item">
-          <span>{tech.icon}</span>
-          <span>{tech.name}</span>
-          <span class="separator">/</span>
-        </div>
-      {/each}
-    </div>
-  </div>
-</section>

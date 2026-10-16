@@ -10,6 +10,10 @@
 				var theme = saved ||
 					(window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
 				document.documentElement.setAttribute("data-theme", theme);
+
+				var lang = null;
+				try { lang = localStorage.getItem("lang"); } catch (e) {}
+				if (lang === "zh") document.documentElement.lang = "zh";
 			})();
 		</script>
 		%sveltekit.head%

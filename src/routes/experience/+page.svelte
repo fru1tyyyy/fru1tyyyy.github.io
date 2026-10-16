@@ -5,13 +5,15 @@
   import Education from "$lib/work/Educations.svelte";
   import Volunteer from "$lib/work/Volunteer.svelte";
   import Header from "$lib/components/Header.svelte";
+  import { t } from "$lib/i18n.js";
 
+  // Internal IDs (kept in English, not shown to visitors)
   let activeTab = "Education";
 
   /**
-     * @param {string} tab
-     */
-  function selectTab(tab){
+   * @param {string} tab
+   */
+  function selectTab(tab) {
     activeTab = tab;
   }
 
@@ -20,8 +22,8 @@
 
   onMount(() => {
     setTimeout(() => {
-        showIntro = false;
-        pageLoaded = true;
+      showIntro = false;
+      pageLoaded = true;
     }, 1000);
   });
 </script>
@@ -29,6 +31,48 @@
 <svelte:head>
   <title>YU BEEN</title>
 </svelte:head>
+
+{#if showIntro}
+<div class="intro-screen" transition:fade={{ duration: 300 }}>
+  <div class="intro-text">
+    <h1 transition:fly={{ y: -300, duration: 400 }}>{$t("nav.work")}</h1>
+  </div>
+</div>
+{/if}
+
+<Header/>
+
+<div class="work-wrap">
+  <div class="tabs">
+    <button on:click={() => selectTab("Education")} class:selected={activeTab === "Education"}>
+      {$t("work.education")}
+    </button>
+    <button on:click={() => selectTab("Experience")} class:selected={activeTab === "Experience"}>
+      {$t("work.experience")}
+    </button>
+    <button on:click={() => selectTab("Volunteer")} class:selected={activeTab === "Volunteer"}>
+      {$t("work.volunteer")}
+    </button>
+  </div>
+
+  {#if pageLoaded}
+  <div in:fly={{ y: 300, duration: 800 }}>
+    <div class="tab-content">
+      {#key activeTab}
+      <div in:fly={{ y: 300, duration: 2000 }} out:fly={{ y: 300, duration: 500 }}>
+        {#if activeTab === "Education"}
+        <Education/>
+        {:else if activeTab === "Experience"}
+        <Experience/>
+        {:else if activeTab === "Volunteer"}
+        <Volunteer/>
+        {/if}
+      </div>
+      {/key}
+    </div>
+  </div>
+  {/if}
+</div>
 
 <style>
 .work-wrap {
@@ -86,13 +130,6 @@ button.selected {
   margin: 0 auto;
 }
 
-h1 {
-  text-align: center;
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 3rem;
-  color: var(--text);
-}
-
 @media (max-width: 768px) {
   .tabs {
     padding-top: 5rem;
@@ -107,39 +144,3 @@ h1 {
   }
 }
 </style>
-
-{#if showIntro}
-<div class="intro-screen" transition:fade={{duration: 300}}>
-  <div class="intro-text">
-    <h1 transition:fly={{y: -300, duration: 400}}>Work</h1>
-  </div>
-</div>
-{/if}
-
-<Header/>
-
-<div class="work-wrap">
-  <div class="tabs">
-    <button on:click={() => selectTab("Education")} class:selected={activeTab === "Education"}>Education</button>
-    <button on:click={() => selectTab("Experience")} class:selected={activeTab === "Experience"}>Experience</button>
-    <button on:click={() => selectTab("Volunteer")} class:selected={activeTab === "Volunteer"}>Volunteer</button>
-  </div>
-
-  {#if pageLoaded}
-  <div in:fly={{y: 300, duration: 800}}>
-    <div class="tab-content">
-      {#key activeTab}
-      <div in:fly={{y: 300, duration: 2000}} out:fly={{y: 300, duration: 500}}>
-        {#if activeTab === "Education"}
-        <Education/>
-        {:else if activeTab === "Experience"}
-        <Experience/>
-        {:else if activeTab === "Volunteer"}
-        <Volunteer/>
-        {/if}
-      </div>
-      {/key}
-    </div>
-  </div>
-  {/if}
-</div>

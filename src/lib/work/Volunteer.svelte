@@ -1,31 +1,10 @@
 <script>
-  const volunteer = [
-    {
-      date: "2025",
-      org: "Desa Mentari",
-      bullets: [
-        "Participated in community service by painting walls in public or community spaces",
-        "Helped prepare surfaces, apply paint, and ensure a neat, professional finish",
-        "Worked collaboratively with a team to complete the project efficiently",
-        "Gained experience in teamwork, attention to detail, and hands-on project work"
-      ]
-    },
-    {
-      date: "2024",
-      org: "My Pets Haven",
-      bullets: [
-        "Participate for community service to take care of dogs, including feeding and providing fresh water",
-        "Cleaned and maintained dog cages to ensure a hygienic and safe environment",
-        "Monitored dogs behavior and health, reporting any concerns to staff",
-        "Developed responsibility, teamwork, and animal care skills through hands-on experience"
-      ]
-    }
-  ];
+  import { t } from "$lib/i18n.js";
 </script>
 
 <section class="volunteer">
-  <h2>My Volunteer</h2>
-  {#each volunteer as vol}
+  <h2>{$t("volunteer.title")}</h2>
+  {#each $t("volunteer.items") as vol}
     <div class="row">
       <div class="date">{vol.date}</div>
       <div class="content">
@@ -95,13 +74,6 @@ h2 {
   margin-bottom: 0.3rem;
 }
 
-.content h4 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-
 ul {
   padding-left: 1.2rem;
   line-height: 1.7;
@@ -118,19 +90,10 @@ li {
     padding: 4rem 6%;
   }
 
-  .volunteer::before {
-    left: 20px;
-  }
-
   .row {
     flex-direction: column;
     gap: 0.5rem;
     padding-left: 40px;
-  }
-
-  .row::before {
-    left: 10px;
-    top: 0.5rem;
   }
 
   .date {

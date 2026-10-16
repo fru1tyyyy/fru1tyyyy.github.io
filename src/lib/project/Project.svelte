@@ -1,63 +1,66 @@
 <script>
+  import { t } from "$lib/i18n.js";
+
+  // "id" links to projects.desc.<id> in i18n.js
   const projects = [
     {
       title: "Chatty",
       image: "/img/chatty.png",
       link: "https://github.com/fru1tyyyy/chatty",
-      description: "A real time chatting system !!!"
+      id: "chatty"
     },
     {
       title: "My Portfolio",
       image: "/img/portfolio1.png",
       link: "https://github.com/fru1tyyyy/fru1tyyyy.github.io",
-      description: "My personal portfolio !!!"
+      id: "portfolio"
     },
     {
       title: "CubeX",
       image: "/img/cubex.png",
       link: "https://github.com/fru1tyyyy/cubex",
-      description: "A cube shop !!!"
+      id: "cubex"
     },
     {
       title: "Killua",
       image: "/img/killua.jpg",
       link: "https://github.com/fru1tyyyy/killua",
-      description: "Discord music bot !!!"
+      id: "killua"
     },
     {
       title: "BlurVision",
       image: "/img/faceblur.jpg",
       link: "https://github.com/fru1tyyyy/blurvision",
-      description: "Detect people faces and blur it !!!"
+      id: "blurvision"
     },
     {
       title: "Predict-Price",
       image: "/img/ml.jpg",
       link: "https://github.com/fru1tyyyy/predict-price",
-      description: "Machine Learning to predict price !!!"
+      id: "predict"
     },
     {
       title: "Pokemon",
       image: "/img/pokemon.jpg",
       link: "https://github.com/fru1tyyyy/pokemon",
-      description: "A pokemon game !!!"
+      id: "pokemon"
     }
   ];
 </script>
 
 <div class="projects-wrap">
   <section class="projects">
-    <h1>My Projects</h1>
+    <h1>{$t("projects.title")}</h1>
 
     {#each projects as project}
       <div class="project-card">
-        <a href={project.link} target="_blank" class="image-wrapper">
+        <a href={project.link} target="_blank" rel="noopener noreferrer" class="image-wrapper">
           <img src={project.image} alt={project.title} />
         </a>
 
         <div class="content">
           <h2>{project.title}</h2>
-          <p>{project.description}</p>
+          <p>{$t("projects.desc." + project.id)}</p>
         </div>
       </div>
     {/each}
