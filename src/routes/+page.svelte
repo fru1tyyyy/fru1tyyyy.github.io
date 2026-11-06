@@ -16,12 +16,12 @@
     { name: "EXPRESS.JS"},
     { name: "GITHUB"},
     { name: "GIT"},
-    { name: "NEXT.JS"},
+    { name: "LUA"},
+    { name: "FLUTTER"},
     { name: "FIGMA" },
     { name: "JAVA"},
     { name: "PYTHON"},
     { name: "PHP"},
-    { name: "SCALA"},
     { name: "CSS"}
   ];
 

@@ -15,6 +15,40 @@
     <title>YU BEEN</title>
 </svelte:head>
 
+{#if showIntro}
+<div class="intro-screen" transition:fade={{duration: 300}}>
+    <div class="intro-text">
+        <h1 transition:fly={{y: -300, duration: 400}}>Contact</h1>
+    </div>
+</div>
+{/if}
+
+<Header/>
+<div class="footer-panel">
+    <div class="wrapper">
+        <header class="header">
+            <div class="copyright">© Yu Been 2025</div>
+        </header>
+        <section class="content-main">
+            <div class="cta-container">
+                <a href="mailto:yubeen721@gmail.com" class="cta-text-link"><h1 class="cta-text">CONTACT</h1></a>
+            </div>
+        </section>
+        <footer class="footer-bottom">
+            <div class="social-links">
+                <a href="https://github.com/fru1tyyyy" target="_blank" rel="noopener noreferrer" class="social-btn">GITHUB</a>
+                <a href="https://www.linkedin.com/in/been-yu" target="_blank" rel="noopener noreferrer" class="social-btn">LINKEDIN</a>
+                <a href="https://steamcommunity.com/id/fru1tyyyy/" target="_blank" rel="noopener noreferrer" class="social-btn">STEAM</a>
+                <a href="https://linktr.ee/fru1tyyyy" target="_blank" rel="noopener noreferrer" class="social-btn">LINKTREE</a>
+            </div>
+            <div class="credits">
+                <p>Design by <span>Yu Been</span></p>
+                <p>yubeen721@gmail.com</p>
+            </div>
+        </footer>
+    </div>
+</div>
+
 <style>
     .intro-screen {
         position: fixed;
@@ -206,35 +240,3 @@
         }
     }
 </style>
-{#if showIntro}
-<div class="intro-screen" transition:fade={{duration: 300}}>
-    <div class="intro-text">
-        <h1 transition:fly={{y: -300, duration: 400}}>Contact</h1>
-    </div>
-</div>
-{/if}
-
-<Header/>
-<div class="footer-panel">
-    <div class="wrapper">
-        <header class="header">
-            <div class="copyright">© Yu Been 2025</div>
-        </header>
-        <section class="content-main">
-            <div class="cta-container">
-                <a href="mailto:yubeen721@gmail.com" class="cta-text-link"><h1 class="cta-text">CONTACT</h1></a>
-            </div>
-        </section>
-        <footer class="footer-bottom">
-            <div class="social-links">
-                <a href="https://github.com/fru1tyyyy" target="_blank" rel="noopener noreferrer" class="social-btn">GITHUB</a>
-                <a href="https://www.linkedin.com/in/been-yu" target="_blank" rel="noopener noreferrer" class="social-btn">LINKEDIN</a>
-                <a href="https://linktr.ee/fru1tyyyy" target="_blank" rel="noopener noreferrer" class="social-btn">LINKTREE</a>
-            </div>
-            <div class="credits">
-                <p>Design by <span>Yu Been</span></p>
-                <p>yubeen721@gmail.com</p>
-            </div>
-        </footer>
-    </div>
-</div>

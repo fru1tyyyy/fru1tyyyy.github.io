@@ -6,7 +6,7 @@
   const sections = [
     {
       title: "languages",
-      items: ["JavaScript", "TypeScript", "Python", "PHP", "C#"]
+      items: ["JavaScript", "TypeScript", "Python", "PHP", "Lua"]
     },
     {
       title: "frameworks",

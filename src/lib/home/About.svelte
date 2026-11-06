@@ -10,7 +10,7 @@
 <section class="hero" id="about">
   <div class="hero-content">
     <div class="avatar">
-      <img src="/img/pfp3.jpg" alt="Avatar" />
+      <img src="/img/pfp4.jpg" alt="Avatar" />
     </div>
 
     <div class="intro">
