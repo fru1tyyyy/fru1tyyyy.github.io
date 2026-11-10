@@ -14,7 +14,7 @@
     },
     {
       title: "tools",
-      items: ["Git", "GitHub", "VS Code", "Figma", "Canva"]
+      items: ["Git", "GitHub", "VS Code", "Figma", "Blender"]
     }
   ];
 
