@@ -56,6 +56,7 @@ export const translations = {
     projects: {
       title: "My Projects",
       desc: {
+        roblox: "A roblox game !!!",
         chatty: "A real time chatting system !!!",
         portfolio: "My personal portfolio !!!",
         cubex: "A cube shop !!!",
@@ -213,6 +214,7 @@ export const translations = {
     projects: {
       title: "我的项目",
       desc: {
+        roblox: "一款 Roblox 游戏 !!!",
         chatty: "实时聊天系统 !!!",
         portfolio: "我的个人作品集 !!!",
         cubex: "魔方商店 !!!",

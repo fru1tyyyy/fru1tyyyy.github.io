@@ -4,6 +4,12 @@
   // "id" links to projects.desc.<id> in i18n.js
   const projects = [
     {
+      title: "+ 1 Evolution Pet",
+      image: "/img/roblox.png",
+      link: "",
+      id: "roblox"
+    },
+    {
       title: "Chatty",
       image: "/img/chatty.png",
       link: "https://github.com/fru1tyyyy/chatty",
