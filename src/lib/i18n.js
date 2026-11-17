@@ -119,6 +119,17 @@ export const translations = {
       title: "My Experience",
       items: [
         {
+          date: "October 2026 - Current",
+          org: "Roblox Developer",
+          role: "Self Employed",
+          bullets: [
+            "Build + 1 Evolve a Pet using Lua and Blender",
+            "Create a Roblox game with engaging gameplay and interactive features",
+            "Collaborate with a team of developers to design and implement game mechanics",
+            "Gain experience in game development, scripting, and 3D modeling"
+          ]
+        },
+        {
           date: "August 2024 - December 2024",
           org: "BASS SDN BHD",
           role: "Software Intern",
@@ -276,6 +287,17 @@ export const translations = {
     experience: {
       title: "我的工作经验",
       items: [
+        {
+          date: "2026年10月 - 现在",
+          org: "Roblox Developer",
+          role: "自雇开发者",
+          bullets: [
+            "使用 Lua 和 Blender 构建 + 1 Evolve a Pet",
+            "创建具有引人入胜的游戏玩法和互动功能的 Roblox 游戏",
+            "与开发团队合作，设计和实现游戏机制",
+            "积累游戏开发、脚本编写和 3D 建模的经验"
+          ]
+        },
         {
           date: "2024年8月 - 2024年12月",
           org: "BASS SDN BHD",
